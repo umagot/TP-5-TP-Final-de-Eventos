@@ -1,0 +1,951 @@
+{
+	"info": {
+		"_postman_id": "63dc4c13-453a-4f2d-8b93-22bdfae73565",
+		"name": "tpDai",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Events",
+			"item": [
+				{
+					"name": "Act 2-Listado de Eventos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3600/api/event",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 3-Búsqueda de un Evento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3600/api/event/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"event",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Taylor Swift",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "startdate",
+									"value": "2024-03-28",
+									"disabled": true
+								},
+								{
+									"key": "tag",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 4-Detalle de un Evento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3600/api/event/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"event",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 5-Listado de participantes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3600/api/event/2/enrollment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"event",
+								"2",
+								"enrollment"
+							],
+							"query": [
+								{
+									"key": "first_name",
+									"value": "Julian",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "Schiffer",
+									"disabled": true
+								},
+								{
+									"key": "username",
+									"value": "schifferjulian@gmail.com",
+									"disabled": true
+								},
+								{
+									"key": "attended",
+									"value": "false",
+									"disabled": true
+								},
+								{
+									"key": "rating",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 8- Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJwYXVsenVyYmFub0BnbWFpbC5jb20iLCJpYXQiOjE3MjAxNDQ3MDUsImV4cCI6MTcyMDE0ODMwNSwiaXNzIjoicGFibG8geSB0b21hcyJ9.M5DEXMQQsUYtazQS6NiSMcl0Wuofb26LSN1NnwZE_oc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"\",\r\n    \"description\":\"\",\r\n    \"id_event_category\":\"\",\r\n    \"id_event_location\":\"\",\r\n    \"start_date\":\"\",\r\n    \"duration_in_minutes\":\"\",\r\n    \"price\":\"\",\r\n    \"enabled_for_enrollment\":\"\",\r\n    \"max_assistance\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3600/api/event",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 8- Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"\",\r\n    \"description\":\"\",\r\n    \"id_event_category\":\"\",\r\n    \"id_event_location\":\"\",\r\n    \"start_date\":\"\",\r\n    \"duration_in_minutes\":\"\",\r\n    \"price\":\"\",\r\n    \"enabled_for_enrollment\":\"\",\r\n    \"max_assistance\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3600/api/event",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 8- Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzIwMTgxOTI0LCJleHAiOjE3MjAxODU1MjQsImlzcyI6InBhYmxvIHkgdG9tYXMifQ._TdDYsYduVjCwU2n2vdH7MYjbumQm7QdgwK3sebt5gw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"evento\",\r\n    \"description\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3600/api/event/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"event",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 9- Enroll event",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJzY2hpZmZlcmp1bGlhbkBnbWFpbC5jb20iLCJpYXQiOjE3MjAxNzY0MzEsImV4cCI6MTcyMDE4MDAzMSwiaXNzIjoicGFibG8geSB0b21hcyJ9.ZPW_kEt1DyaM0pOhV9AJW-ItCVUlXWy7rtUKqV9Xz7U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3600/api/event/2/enrollment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"event",
+								"2",
+								"enrollment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 10- Rate",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3600/api/event/2/enrollment/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"event",
+								"2",
+								"enrollment",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Act 6-Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\":\"carlos\",\r\n    \"last_name\":\"gomez\",\r\n    \"username\":\"carlosgomez@gmail.com\",\r\n    \"password\":\"carlitos26\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3600/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 6-Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"schifferjulian@gmail.com\",\r\n    \"password\":\"julian\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3600/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 6- Ver usuario logeado",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJwYXVsenVyYmFub0BnbWFpbC5jb20iLCJpYXQiOjE3MjAxMzkyMDAsImV4cCI6MTcyMDE0MjgwMCwiaXNzIjoibmVvdGljdG9tIn0.JwpAEip5VD9kOtvmPaZEx5gRAhDNyJj81KDLRvKat8Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3600/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Province",
+			"item": [
+				{
+					"name": "Act 7- Get Provinces",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3600/api/province",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"province"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 7- Get Provinces by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3600/api/province/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"province",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 7- Get Provinces locations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3600/api/province/2/locations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"province",
+								"2",
+								"locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 7- Create Province",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"provincia\",\r\n    \"full_name\":\"provincia nacional de las provincias\",\r\n    \"latitude\":\"3123\",\r\n    \"longitude\":\"34523\",\r\n    \"display_order\":\"120\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3600/api/province",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"province"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 7- Update Province",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"\",\r\n    \"full_name\":\"\",\r\n    \"latitude\":\"\",\r\n    \"longitude\":\"\",\r\n    \"display_order\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3600/api/province/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"province",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 7- Delete Province",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"\",\r\n    \"full_name\":\"\",\r\n    \"latitude\":\"\",\r\n    \"longitude\":\"\",\r\n    \"display_order\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3600/api/province/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"province",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Locations",
+			"item": [
+				{
+					"name": "Act 11-Get locations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3600/api/locations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 11-Get locations by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3600/locations/api/3357",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"locations",
+								"api",
+								"3357"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 11-Get event locations from user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJzY2hpZmZlcmp1bGlhbkBnbWFpbC5jb20iLCJpYXQiOjE3MjAxNzY0MzEsImV4cCI6MTcyMDE4MDAzMSwiaXNzIjoicGFibG8geSB0b21hcyJ9.ZPW_kEt1DyaM0pOhV9AJW-ItCVUlXWy7rtUKqV9Xz7U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3600/api/locations/1/event-location",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"locations",
+								"1",
+								"event-location"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Act 12-Get event categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3600/api/event-category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"event-category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 12-Get event categories by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3600/api/event-category/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"event-category",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 12-Create category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"\",\r\n    \"display_order\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3600/api/event-category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"event-category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 12-Edit category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"\",\r\n    \"display_order\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3600/api/event-category/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"event-category",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 12-Delete category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3600/api/event-category/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"event-category",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Event locations",
+			"item": [
+				{
+					"name": "Act 13- Get event locations from user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJzY2hpZmZlcmp1bGlhbkBnbWFpbC5jb20iLCJpYXQiOjE3MjAxNzY0MzEsImV4cCI6MTcyMDE4MDAzMSwiaXNzIjoicGFibG8geSB0b21hcyJ9.ZPW_kEt1DyaM0pOhV9AJW-ItCVUlXWy7rtUKqV9Xz7U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3600/api/event-location",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"event-location"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 13- Get event locations from user by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJzY2hpZmZlcmp1bGlhbkBnbWFpbC5jb20iLCJpYXQiOjE3MjAxNzY0MzEsImV4cCI6MTcyMDE4MDAzMSwiaXNzIjoicGFibG8geSB0b21hcyJ9.ZPW_kEt1DyaM0pOhV9AJW-ItCVUlXWy7rtUKqV9Xz7U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3600/api/event-location/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"event-location",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 13- Create event location",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJzY2hpZmZlcmp1bGlhbkBnbWFpbC5jb20iLCJpYXQiOjE3MjAxNzY0MzEsImV4cCI6MTcyMDE4MDAzMSwiaXNzIjoicGFibG8geSB0b21hcyJ9.ZPW_kEt1DyaM0pOhV9AJW-ItCVUlXWy7rtUKqV9Xz7U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_location\":\"\",\r\n    \"name\":\"\",\r\n    \"full_address\":\"\",\r\n    \"max_capacity\":\"\",\r\n    \"latitude\":\"\",\r\n    \"longitude\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3600/api/event-location",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"event-location"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 13- Create event location Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJzY2hpZmZlcmp1bGlhbkBnbWFpbC5jb20iLCJpYXQiOjE3MjAxNzY0MzEsImV4cCI6MTcyMDE4MDAzMSwiaXNzIjoicGFibG8geSB0b21hcyJ9.ZPW_kEt1DyaM0pOhV9AJW-ItCVUlXWy7rtUKqV9Xz7U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_location\":\"\",\r\n    \"name\":\"\",\r\n    \"full_address\":\"\",\r\n    \"max_capacity\":\"\",\r\n    \"latitude\":\"\",\r\n    \"longitude\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3600/api/event-location/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"event-location",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Act 13- Create event location Copy 2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJzY2hpZmZlcmp1bGlhbkBnbWFpbC5jb20iLCJpYXQiOjE3MjAxNzY0MzEsImV4cCI6MTcyMDE4MDAzMSwiaXNzIjoicGFibG8geSB0b21hcyJ9.ZPW_kEt1DyaM0pOhV9AJW-ItCVUlXWy7rtUKqV9Xz7U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_location\":\"\",\r\n    \"name\":\"\",\r\n    \"full_address\":\"\",\r\n    \"max_capacity\":\"\",\r\n    \"latitude\":\"\",\r\n    \"longitude\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3600/api/event-location/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3600",
+							"path": [
+								"api",
+								"event-location",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
