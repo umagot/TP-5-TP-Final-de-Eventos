@@ -10,7 +10,7 @@ import express from "express"
 
 const app = express(); 
 app.use(express.json()); 
-const port = 3600;
+const port = 3000;
 
 
 app.use("/api/event", EventController);
